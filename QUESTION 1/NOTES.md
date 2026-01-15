@@ -1,4 +1,4 @@
-**Vulnerabilities Identified**
+# Vulnerabilities Identified
 
 The application used string formatting to build SQL queries in both the /search and /transaction endpoints.
 
@@ -20,7 +20,7 @@ The vulnerability was fixed by using parameterized queries, ensuring user input 
 
 
 
-**Performance Solution Chosen**
+# Performance Solution Chosen
 
 The /transaction endpoint simulated a slow external banking service using time.sleep().
 
@@ -30,7 +30,7 @@ When multiple users triggered transactions, the application became unresponsive 
 
 To solve this, the transaction logic was moved to a background thread using Python’s threading module.
 
-**The API now:**
+# The API now:
 
 Immediately responds to the client
 
